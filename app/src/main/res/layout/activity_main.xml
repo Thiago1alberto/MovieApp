@@ -4,40 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="32dp"
-    android:background="#ad911a"
     tools:context=".activity.MainActivity">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@color/dark_blue">
 
-    <EditText
-        android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="158dp"
-        android:background="#fff"
-        android:hint="@string/email"
-        android:padding="8dp" />
+      <ImageView
+          android:layout_width="100dp"
+          android:layout_height="match_parent"
+          android:padding="10dp"
+            android:src="@drawable/ic_tmdb_icon"
+          />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="12dp"
-        android:background="#fff"
-        android:hint="@string/senha"
-        android:inputType="textPassword"
-        android:padding="8dp" />
+      </LinearLayout>
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/banner"
+                    android:layout_height="200dp"
+                     android:layout_width="match_parent"/>
 
-    <Button
-        android:id="@+id/login_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/password"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="#DADADA"
-        android:text="@string/login"
-        android:textColor="#08AD7F" />
+                <TextView
+                    android:id="@+id/id_text_popular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/banner"
+                    android:layout_margin="10dp"
+                    android:paddingStart="24dp"
+                    android:text="@string/populares_text"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+                <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
+                    android:id="@+id/popularCarouselRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="128dp"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/id_text_popular"
+                    />
+                <TextView
+                    android:id="@+id/id_text_free"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/freeForWatch_text"
+                    android:textSize="24sp"
+                    android:paddingStart="24dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/popularCarouselRecyclerView"
+
+                    />
+                <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
+                    android:id="@+id/freeWatchCarouselRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="128dp"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/id_text_free"
+                    />
+                <TextView
+                    android:id="@+id/lastTrailers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lastTrailers_text"
+                    android:textSize="24sp"
+                    android:paddingStart="24dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/freeWatchCarouselRecyclerView"
+
+                    />
+                <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
+                    android:id="@+id/lastTrailersCarouselRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="128dp"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/lastTrailers"
+                    />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
 
 
 
