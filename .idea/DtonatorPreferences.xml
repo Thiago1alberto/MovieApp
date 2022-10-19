@@ -10,7 +10,7 @@
       </list>
     </option>
     <option name="fieldType" value="GSON" />
-    <option name="languageType" value="KOTLIN_VAR" />
+    <option name="languageType" value="KOTLIN_VAL" />
     <option name="naming">
       <list>
         <option value="CAMEL_CASE" />
