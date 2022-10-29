@@ -3,4 +3,6 @@
     <string name="populares_text">Os Mais Populares</string>
     <string name="freeForWatch_text">Grátis para Assistir</string>
     <string name="lastTrailers_text">Últimos Trailers</string>
+    <string name="search_for_movie">Search for movie</string>
+    <string name="cancel_search">Cancel Search</string>
 </resources>
