@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="banner" type="id" />
+    <item name="id_text_popular" type="id" />
+    <item name="popularCarouselRecyclerView" type="id" />
+    <item name="id_text_free" type="id" />
+    <item name="freeWatchCarouselRecyclerView" type="id" />
+    <item name="lastTrailers" type="id" />
+    <item name="lastTrailersCarouselRecyclerView" type="id" />
+</resources>

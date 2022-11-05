@@ -11,4 +11,8 @@ data class MovieSearchResponse (
     @SerializedName("results")
     @Expose
     val movies:List<Movie>
-)
+) {
+    override fun toString(): String {
+        return "MovieSearchResponse(totalCount=$totalCount, movies=$movies)"
+    }
+}

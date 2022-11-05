@@ -4,7 +4,6 @@ import com.example.movieapp102.api.Endpoint
 import com.example.movieapp102.util.Credentials
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 
 class NetworkUtils {
     //Singleton instance for network
@@ -19,7 +18,7 @@ class NetworkUtils {
 
         private val endPoint = getRetrofit().create(Endpoint::class.java)
 
-        public fun getMovie(): Endpoint{
+        fun getMovie(): Endpoint{
             return endPoint
         }
     }

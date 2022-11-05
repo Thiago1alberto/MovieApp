@@ -8,4 +8,8 @@ data class MovieResponse(
     @SerializedName("results")
     @Expose
     val movie: Movie
-)
+) {
+    override fun toString(): String {
+        return "MovieResponse(movie=$movie)"
+    }
+}

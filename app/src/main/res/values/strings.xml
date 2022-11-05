@@ -5,4 +5,5 @@
     <string name="lastTrailers_text">Últimos Trailers</string>
     <string name="search_for_movie">Search for movie</string>
     <string name="cancel_search">Cancel Search</string>
+    <string name="button_for_search">button for search</string>
 </resources>
