@@ -8,6 +8,7 @@ data class MovieSearchResponse (
     @SerializedName("total_results")
     @Expose
     val totalCount:Int,
+
     @SerializedName("results")
     @Expose
     val movies:List<Movie>

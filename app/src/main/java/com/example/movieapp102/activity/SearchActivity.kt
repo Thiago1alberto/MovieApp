@@ -35,16 +35,16 @@ class SearchActivity : AppCompatActivity(), View.OnClickListener {
         if(view.id == R.id.button_cancel_search_movie){
             this.toMainActivity()
         }
-//        if(view.id == R.id.button_search_movie){
-//
-//        }
+        if(view.id == R.id.button_search_movie){
+           this.getMovieSearch(binding.textSearchMovie.text.toString())
+        }
     }
 
     private fun toMainActivity() {
         val toPage = Intent(this,MainActivity::class.java)
         startActivity(toPage)
     }
-    private fun getRetrofit(query: String, callback: (List<Movie>)-> Unit)  {
+    private fun getMovieSearch(query: String)  {
         val movie = NetworkUtils.getMovie()
         val responseCall: Call<MovieSearchResponse> = movie.searchMovie(Credentials.API_KEY, query)
         responseCall.enqueue(object : Callback<MovieSearchResponse> {
@@ -54,7 +54,9 @@ class SearchActivity : AppCompatActivity(), View.OnClickListener {
             ) {
                 if (response.code() == 200) {
                     val movies: List<Movie> = ArrayList(response.body()!!.movies)
-                    return callback(movies)
+                    for (movie in movies) {
+                             Log.v("tag", "Movie name: ${movie.title}")
+                    }
                 } else {
                     try {
                         Log.v("Tag", "Erro" + response.errorBody().toString())

@@ -26,6 +26,7 @@ data class Movie(
 
     @SerializedName("original_language")
     val originalLanguage: String,
+
     @SerializedName("title")
     val title: String,
 
