@@ -8,8 +8,13 @@ import retrofit2.http.Query
 interface Endpoint {
 
     @GET("search/movie")
-    fun searchMovie(@Query("api_key") apiKey: String,@Query("query") query: String) : Call<MovieSearchResponse>
+    fun searchMovie(@Query("api_key") apiKey: String,
+                    @Query("query") query: String,
+                    @Query("page") page: Int) :
+            Call<MovieSearchResponse>
 
     @GET("movie/popular")
-    fun getPopularMovies(@Query("api_key")apiKey: String): Call<MovieSearchResponse>
+    fun getPopularMovies(@Query("api_key")apiKey: String):
+            Call<MovieSearchResponse>
+
 }
